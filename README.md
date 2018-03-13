@@ -46,3 +46,9 @@ endGroup(sample.SampleTest)
 [success] Total time: 1 s, completed 13/03/2018 4:48:47 PM
 sbt:sbt-test-listener>
 ```
+
+In non-forked mode, the `-1` suffixes are [added by SBT](https://github.com/sbt/sbt/blob/b9171e59ad26058157686469d925916dd44fd35a/main/actions/src/main/scala/sbt/Tests.scala#L193-L198)
+This logic was added in https://github.com/sbt/sbt/commit/3109912d00807151aa536fc0e17976e77efc3d74.
+
+We should add the same to ForkMain, I suppose.
+
